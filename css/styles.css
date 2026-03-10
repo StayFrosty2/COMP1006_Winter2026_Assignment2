@@ -11,8 +11,23 @@ html {
 	box-sizing: inherit;
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    display: grid;
+    grid-template-areas: 
+        "image livewell"
+        "image style"
+        "aside health";
+    
+}
+
+
 h1, h2 {
     font-family: serif;
+    margin: 0;
 }
 /* Make all h2s lowercase */
 h2 {
@@ -21,10 +36,17 @@ h2 {
 
 
 /* ----Header----*/
-
 header h1 {
     color: orangered;
     text-transform: lowercase;
+    font-size: 10rem;
+    text-align: center;
+    
+}
+header p {
+    position: absolute;
+    left: 1rem;
+    top: 0;
 }
 
 
@@ -33,6 +55,7 @@ header h1 {
 /* Section 1 */
 section:nth-of-type(1) {
     border-top: 10px solid olivedrab;
+    grid-area: livewell;
 }
 section:nth-of-type(1) h3 {
     color: olivedrab;
@@ -42,6 +65,7 @@ section:nth-of-type(1) h3 {
 /* Section 2 */
 section:nth-of-type(2) {
     border-top: 10px solid deeppink;
+    grid-area: style;
 }
 section:nth-of-type(2) h3 {
     color: deeppink;
@@ -51,6 +75,7 @@ section:nth-of-type(2) h3 {
 /* Section 3 */
 section:nth-of-type(3) {
     border-top: 10px solid deepskyblue;
+    grid-area: health;
 }
 section:nth-of-type(3) h3 {
     color: deepskyblue;
@@ -58,11 +83,19 @@ section:nth-of-type(3) h3 {
 }
 
 /* Asides */
+aside:nth-of-type(1) {
+    grid-area: image;
+}
 aside:nth-of-type(2) {
     border: 2px solid orange;
+    grid-area: aside;
 }
 
 /* Footer */
+footer {
+    text-align: right;
+    margin: 10px;
+}
 footer em {
     color: orangered;
 }
