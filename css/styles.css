@@ -32,6 +32,7 @@ h1, h2 {
 /* Make all h2s lowercase */
 h2 {
     text-transform: lowercase;
+    font-size: 3rem;
 }
 
 
@@ -51,6 +52,17 @@ header p {
 
 
 /* ----Main Body---- */
+
+/* All Sections */
+section {
+    width: 50%;
+    height: 33%;
+    margin: 0 auto;
+}
+section li h3, section li p {
+    display: inline-block;
+    margin-right: 10px;
+}
 
 /* Section 1 */
 section:nth-of-type(1) {
@@ -83,6 +95,9 @@ section:nth-of-type(3) h3 {
 }
 
 /* Asides */
+aside {
+    margin-left: 5%;
+}
 aside:nth-of-type(1) {
     grid-area: image;
 }
