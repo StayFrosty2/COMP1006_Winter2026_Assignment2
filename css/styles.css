@@ -1,23 +1,68 @@
 @charset "UTF-8";
+/* ----General Styling---- */
 
 /* Set the box sizing to border-box and make it inheritable */
 html {
 	box-sizing: border-box;
+    /* Also set the font family the majority of the page will use */
+    font-family: sans-serif;
 }
 *, *:before, *:after {
 	box-sizing: inherit;
 }
 
-section:nth-of-type(1) {
-    border-top: 10px solid limegreen;
+h1, h2 {
+    font-family: serif;
 }
+/* Make all h2s lowercase */
+h2 {
+    text-transform: lowercase;
+}
+
+
+/* ----Header----*/
+
+header h1 {
+    color: orangered;
+    text-transform: lowercase;
+}
+
+
+/* ----Main Body---- */
+
+/* Section 1 */
+section:nth-of-type(1) {
+    border-top: 10px solid olivedrab;
+}
+section:nth-of-type(1) h3 {
+    color: olivedrab;
+    text-transform: uppercase;
+}
+
+/* Section 2 */
 section:nth-of-type(2) {
     border-top: 10px solid deeppink;
 }
+section:nth-of-type(2) h3 {
+    color: deeppink;
+    text-transform: uppercase;
+}
+
+/* Section 3 */
 section:nth-of-type(3) {
     border-top: 10px solid deepskyblue;
 }
+section:nth-of-type(3) h3 {
+    color: deepskyblue;
+    text-transform: uppercase;
+}
 
-section h2 {
-    text-transform: lowercase;
+/* Asides */
+aside:nth-of-type(2) {
+    border: 2px solid orange;
+}
+
+/* Footer */
+footer em {
+    color: orangered;
 }
