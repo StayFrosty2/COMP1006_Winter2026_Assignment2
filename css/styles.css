@@ -21,7 +21,7 @@ main {
         "image livewell"
         "image style"
         "aside health";
-    
+    grid-template-columns: 40% 60%;
 }
 
 
@@ -98,16 +98,33 @@ section:nth-of-type(3) h3 {
 }
 
 /* Asides */
-aside {
-    margin-left: 5%;
-}
+
 aside:nth-of-type(1) {
     margin: 0 auto;
     grid-area: image;
+    height: 500px;
+}
+aside figcaption {
+    color: white;
+    position: relative;
+    top: -11rem;
+    left: 5rem;
+    width: 7rem;
+}
+aside figcaption em {
+    font-size: 5rem;
+}
+aside figcaption p:nth-of-type(2) {
+    color: black;
+    position: absolute;
+    bottom: -365%;
+    left: -205%;
+    rotate: -90deg;
 }
 aside:nth-of-type(2) {
     border: 2px solid orange;
     grid-area: aside;
+    margin-left: 4rem;
 }
 
 /* Footer */
