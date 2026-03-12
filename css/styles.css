@@ -59,8 +59,11 @@ section {
     height: 33%;
     margin: 0 auto;
 }
+section li {
+    margin-bottom: 4%;
+}
 section li h3, section li p {
-    display: inline-block;
+    display: inline;
     margin-right: 10px;
 }
 
@@ -99,6 +102,7 @@ aside {
     margin-left: 5%;
 }
 aside:nth-of-type(1) {
+    margin: 0 auto;
     grid-area: image;
 }
 aside:nth-of-type(2) {
