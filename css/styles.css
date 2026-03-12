@@ -28,6 +28,11 @@ main {
 h1, h2 {
     font-family: serif;
     margin: 0;
+    font-weight: normal;
+}
+h1 {
+    letter-spacing: 0.9rem;
+    word-spacing: 2rem;
 }
 /* Make all h2s lowercase */
 h2 {
@@ -113,6 +118,7 @@ aside figcaption {
 }
 aside figcaption em {
     font-size: 5rem;
+    font-style: normal;
 }
 aside figcaption p:nth-of-type(2) {
     color: black;
@@ -134,4 +140,5 @@ footer {
 }
 footer em {
     color: orangered;
+    font-size: 16px;
 }
