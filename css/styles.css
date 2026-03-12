@@ -10,11 +10,12 @@ html {
 *, *:before, *:after {
 	box-sizing: inherit;
 }
-
+/* the container as a whole is flex, however the main is a grid (the main content of the page */
 #container {
     display: flex;
     flex-direction: column;
 }
+/* Grid and collumns are set */
 main {
     display: grid;
     grid-template-areas: 
@@ -24,12 +25,13 @@ main {
     grid-template-columns: 40% 60%;
 }
 
-
+/* Change font family for h1 and h2, remove margin, de-bold */
 h1, h2 {
     font-family: serif;
     margin: 0;
     font-weight: normal;
 }
+/* adjust letter spacing and word spacing */
 h1 {
     letter-spacing: 0.9rem;
     word-spacing: 2rem;
@@ -59,56 +61,65 @@ header p {
 /* ----Main Body---- */
 
 /* All Sections */
+/* Width, Height, Centered */
 section {
     width: 50%;
     height: 33%;
     margin: 0 auto;
 }
+/* Small amount of space between list items */
 section li {
     margin-bottom: 4%;
 }
+/* Makes words wrap depsite being different items*/
 section li h3, section li p {
     display: inline;
     margin-right: 10px;
 }
 
 /* Section 1 */
+/* Border is colored and grid area is defined */
 section:nth-of-type(1) {
     border-top: 10px solid olivedrab;
     grid-area: livewell;
 }
+/* h3s are colored and all uppercase */
 section:nth-of-type(1) h3 {
     color: olivedrab;
     text-transform: uppercase;
 }
 
 /* Section 2 */
+/* Border is colored and grid area is defined */
 section:nth-of-type(2) {
     border-top: 10px solid deeppink;
     grid-area: style;
 }
+/* h3s are colored and all uppercase */
 section:nth-of-type(2) h3 {
     color: deeppink;
     text-transform: uppercase;
 }
 
 /* Section 3 */
+/* Border is colored and grid area is defined */
 section:nth-of-type(3) {
     border-top: 10px solid deepskyblue;
     grid-area: health;
 }
+/* h3s are colored and all uppercase */
 section:nth-of-type(3) h3 {
     color: deepskyblue;
     text-transform: uppercase;
 }
 
 /* Asides */
-
+/* The image. Grid area is set, height is  set by the image height and margin is removed*/
 aside:nth-of-type(1) {
     margin: 0 auto;
     grid-area: image;
-    height: 500px;
 }
+/* figcaption becomes white, and is positioned inside the image */
 aside figcaption {
     color: white;
     position: relative;
@@ -116,10 +127,12 @@ aside figcaption {
     left: 5rem;
     width: 7rem;
 }
+/* Em is larger and not italisized */
 aside figcaption em {
     font-size: 5rem;
     font-style: normal;
 }
+/* The name credited for the image is sent to the side using absolute */
 aside figcaption p:nth-of-type(2) {
     color: black;
     position: absolute;
@@ -127,6 +140,7 @@ aside figcaption p:nth-of-type(2) {
     left: -205%;
     rotate: -90deg;
 }
+/* border for the second aside, margin added and grid area specified */
 aside:nth-of-type(2) {
     border: 2px solid orange;
     grid-area: aside;
@@ -134,10 +148,12 @@ aside:nth-of-type(2) {
 }
 
 /* Footer */
+/* Text is aligned to the right and a small margin is added */
 footer {
     text-align: right;
     margin: 10px;
 }
+/* Em is made larger and orange */
 footer em {
     color: orangered;
     font-size: 16px;
